@@ -53,7 +53,7 @@ app.use((req, res, next) => {
 });
 
 // 라우트 설정
-app.post("/api/upload", upload.single("image"), (req, res) => {
+app.post("/upload", upload.single("image"), (req, res) => {
   if (req.file) {
     res.json({
       imageUrl: `/uploads/${req.file.filename}`,
